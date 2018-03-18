@@ -67,10 +67,6 @@ public class Biblioteca {
         return mensaje;
     }
 
-    // Método que compara si dos libros son el mismo
-    public boolean compararLibros (Libro lib){
-        return this.equals(libros);
-    }
 
     /*
     Método que indique si es una biblioteca con mucha diversidad:

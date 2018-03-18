@@ -22,6 +22,12 @@ public class Libro {
         return publicacion;
     }
 
+    // Método que compara si dos libros son el mismo
+    public boolean compararLibros (Libro lib){
+        if (lib == null) return false;
+        if (this.nombre.equals(lib.nombre) && this.autor.equals(lib.autor) && this.genero.equals(genero)) return true;
+        return false;
+    }
 
     /*
     Método que si le indicas un género y un autor
