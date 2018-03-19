@@ -76,21 +76,23 @@ public class Biblioteca {
     Método que indique si es una biblioteca con mucha diversidad:
     Se considera diversa si el hay 10 géneros de libros distinto.
      */
-    public boolean comprobarDiversidad(){
-        int contador = 0;
-        ArrayList<Libro> generosBiblioteca = new ArrayList<>();
-        for (int i=0;i< libros.size(); i++){
-            for (int j=0;i< libros.size(); i++){
-                if (!libros.get(i).genero.equals(libros.get(j).genero) && !generosBiblioteca.contains(libros.get(j))){
-                    contador ++;
-                    generosBiblioteca.add(libros.get(j));
+    public boolean comprobarDiversidad() {
+        int count = 0;
+        ArrayList<Libro> genericos = new ArrayList<>();
+        Libro aux;
+        for (int i = 0; i < libros.size(); i++) {
+            for (int a = 0; a < libros.size(); a++) {
+                if (!libros.get(i).genero.equals(libros.get(a).genero) && !genericos.contains(libros.get(a))) {
+                    count++;
+                    genericos.add(libros.get(a));
                 }
             }
         }
-        if (contador > 9){
+        if (count >= 10) {
             return true;
+        } else {
+            return false;
         }
-        return false;
     }
 
     @Override
